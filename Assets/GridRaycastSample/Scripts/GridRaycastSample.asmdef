@@ -1,0 +1,16 @@
+{
+    "name": "GridRaycastSample",
+    "rootNamespace": "GridRaycastSample",
+    "references": [
+        "GUID:4a27cc142e641b5478e99ee3ef7170b4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
