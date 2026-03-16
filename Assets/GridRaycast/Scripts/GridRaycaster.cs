@@ -13,7 +13,7 @@ namespace GridRaycast
             var origin = grid.transform.InverseTransformPoint(ray.origin);
             var cell = grid.LocalToCell(origin);
             var dir = grid.transform.InverseTransformDirection(ray.direction);
-            var cellSize = grid.cellSize;
+            var cellSize = grid.cellSize + grid.cellGap;
 
             var step = new Vector3Int();
             var nextBoundary = new Vector3();
@@ -29,7 +29,7 @@ namespace GridRaycast
 
             var hitCount = 0;
             var t = 0f;
-            for (int i = 0; i < results.Length; i++)
+            for (var i = 0; i < results.Length; i++)
             {
                 var minDim = tMax.x < tMax.y ? tMax.x < tMax.z ? 0 : 2 : tMax.y < tMax.z ? 1 : 2;
                 cell[minDim] += step[minDim];
